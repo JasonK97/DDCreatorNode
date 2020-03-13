@@ -34,7 +34,7 @@ function getCharacter(req, res) {
 function getCharacterFromDb (characterId, callback) {
     console.log("getCharacterFromDb called with id: ", characterId);
 
-    var sql = "SELECT id, ch_name, ch_level FROM character WHERE id = $1::int";
+    var sql = "SELECT * FROM character WHERE id = $1::int";
     var params = [characterId];
 
     pool.query(sql, params, function(err, result) {
