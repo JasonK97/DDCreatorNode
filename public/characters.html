@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="characters-clientside.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Characters</title>
+</head>
+
+<body>
+    <h1>Search for some Characters!</h1>
+    <input type="text" id="character" placeholder="Character"> <button onclick="searchByCharacter()">Search by Character</button><br>
+    <input type="text" id="campaign" placeholder="Campaign"> <button onclick="searchByCampaign()">Search by Campaign</button><br>
+
+    <div>
+        <h2>Results</h2>
+        <ul id="ulCharacters">
+
+        </ul>
+    </div>
+
+</body>
+</html>
