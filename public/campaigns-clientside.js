@@ -68,7 +68,7 @@ function addCampaignToDb() {
         isFree = false;
     }
 
-    $.post("/insertCampaign", function(data) {
+    $.post("/insertCampaign",{title:title, url:url, isFree:isFree}, function(data) {
         $("#addedCampaign").innerHTML("Successfully added" + data);
     });
 }
