@@ -1,5 +1,6 @@
 var express = require("express");
 var app = express();
+require('dotenv').config();
 
 const campaignController = require("./controllers/campaignController.js");
 
