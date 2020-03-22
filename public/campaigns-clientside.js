@@ -4,6 +4,8 @@ function getSpecificCampaign() {
     var title = $("#title").val();
     console.log("campaign: " + title);
 
+    $('#ulCampaigns').html('');
+
      $.get("/getSpecificCampaign", {title:title}, function(data) {
         console.log("Back from the server with:");
         console.log(data);
@@ -19,7 +21,9 @@ function getSpecificCampaign() {
 function whatsFree() {
     console.log("Getting all free campaigns");
 
-     $.get("/searchByFree", function(data) {
+    $('#ulCampaigns').html('');
+
+    $.get("/searchByFree", function(data) {
         console.log("Back from the server with:");
         console.log(data);
 
