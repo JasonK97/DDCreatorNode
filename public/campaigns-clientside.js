@@ -10,6 +10,8 @@ function getSpecificCampaign() {
         console.log("Back from the server with:");
         console.log(data);
 
+        $('#ulCampaigns').html('<h2>Results</h2>');
+
         for (var i = 0; i < data.list.length; i++) {
 			var campaign = data.list[i];
 
@@ -27,6 +29,8 @@ function whatsFree() {
         console.log("Back from the server with:");
         console.log(data);
 
+        $('#ulCampaigns').html('<h2>Results</h2>');
+
         for (var i = 0; i < data.list.length; i++) {
 			var campaign = data.list[i];
 
@@ -43,6 +47,8 @@ function whatsPaid() {
     $.get("/searchByPaid", function(data) {
         console.log("Back from the server with:");
         console.log(data);
+
+        $('#ulCampaigns').html('<h2>Results</h2>');
 
         for (var i = 0; i < data.list.length; i++) {
 			var campaign = data.list[i];
