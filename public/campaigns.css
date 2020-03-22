@@ -97,7 +97,7 @@ a:hover {
     background-color: rgb(31, 0, 0);
     color: white;
     text-align: center;
-    position: sticky;
+    position: static;
     left: 0;
     bottom: 0;
     height: 50px;
