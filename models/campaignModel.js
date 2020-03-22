@@ -75,5 +75,6 @@ module.exports = {
     getAllCampaigns: getAllCampaigns,
     getCampaign: getCampaign,
     isCampaignFree: isCampaignFree,
+    isCampaignPaid: isCampaignPaid,
     insertNewCampaign: insertNewCampaign
 }

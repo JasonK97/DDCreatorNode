@@ -13,6 +13,7 @@ app.set("port", (process.env.PORT || 5000));
 app.get("/getCampaigns", campaignController.getCampaignList);
 app.get("/getSpecificCampaign", campaignController.getSpecificCampaign);
 app.get("/searchByFree", campaignController.searchByFree);
+app.get("/searchByPaid", campaignController.searchByPaid);
 
 app.post("/insertCampaign", campaignController.insertCampaign);
 

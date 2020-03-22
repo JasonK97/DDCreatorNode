@@ -58,5 +58,6 @@ module.exports = {
     getCampaignList: getCampaignList,
     getSpecificCampaign: getSpecificCampaign,
     searchByFree: searchByFree,
+    searchByPaid: searchByPaid,
     insertCampaign: insertCampaign
 }
