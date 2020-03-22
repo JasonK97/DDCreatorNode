@@ -12,7 +12,7 @@ function getAllCampaigns(callback) {
 }
 
 function getCampaign(title, callback) {
-    var sql = "SELECT id, title, url FROM campaign WHERE title=" + title;
+    var sql = "SELECT * FROM campaign";
 
     pool.query(sql, function(err, db_results) {
         if(err) {
