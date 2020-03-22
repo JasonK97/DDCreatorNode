@@ -35,12 +35,10 @@ function getCampaign(title, callback) {
 
 }
 
-function isCampaignFree(isFree, callback) {
-    if (isFree == true) {
-        var sql = "SELECT * FROM campaign WHERE isFree=true";
-        var params = [isFree];
+function isCampaignFree(callback) {
+        var sql = "SELECT * FROM campaign WHERE isFree = true";
 
-        pool.query(sql, params, function (err, db_results) {
+        pool.query(sql, function (err, db_results) {
             if (err) {
                 throw err;
             } else {
@@ -50,7 +48,6 @@ function isCampaignFree(isFree, callback) {
                 callback(null, results);
             }
         })
-    }
 }
 
 function insertNewCampaign(title, url, callback) {
