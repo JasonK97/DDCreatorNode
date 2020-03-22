@@ -1,9 +1,6 @@
 function getSpecificCampaign() {
     console.log("Searching by campaign...");
 
-    var T = document.getElementById("searchArea");
-        T.style.display = "block";
-
     var title = $("#title").val();
     console.log("campaign: " + title);
 
@@ -37,8 +34,6 @@ function whatsFree() {
         for (var i = 0; i < data.list.length; i++) {
             var campaign = data.list[i];
 
-            $("#searchArea").style("display: block;");
-
             $("#ulCampaigns").append("<li><a href=" + campaign.url + ">" + campaign.title + "</a></li><br>");
         }
     });
@@ -57,9 +52,6 @@ function whatsPaid() {
 
         for (var i = 0; i < data.list.length; i++) {
             var campaign = data.list[i];
-
-            var T = document.getElementById("searchArea");
-            T.style.display = "block";
 
             $("#ulCampaigns").append("<li><a href=" + campaign.url + ">" + campaign.title + "</a></li><br>");
         }
