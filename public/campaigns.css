@@ -77,17 +77,6 @@ a {
     color: whitesmoke;
 }
 
-/* #addLink {
-    background-color: rgb(110, 0, 0);
-    padding: 10px 15px;
-    color: white;
-    border: hidden;
-    border-radius: 5px;
-    font-weight: bold;
-    font-family: 'Itim', cursive;
-    font-size: 20px;
-} */
-
 a:hover {
     text-decoration: dotted;
     color: black;
@@ -100,7 +89,7 @@ a:hover {
     position: fixed;
     left: 0;
     bottom: 0;
-    height: 50px;
+    height: 70px;
     width: 100%;
     overflow: hidden;
 }
