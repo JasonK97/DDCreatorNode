@@ -26,9 +26,6 @@ function getSpecificCampaign() {
 function whatsFree() {
     console.log("Getting all free campaigns");
 
-    var T = document.getElementById("searchArea");
-        T.style.display = "block";
-
     $('#ulCampaigns').html('');
 
     $.get("/searchByFree", function (data) {
@@ -40,6 +37,8 @@ function whatsFree() {
         for (var i = 0; i < data.list.length; i++) {
             var campaign = data.list[i];
 
+            $("#searchArea").style("display: block;");
+
             $("#ulCampaigns").append("<li><a href=" + campaign.url + ">" + campaign.title + "</a></li><br>");
         }
     });
@@ -47,9 +46,6 @@ function whatsFree() {
 
 function whatsPaid() {
     console.log("Getting all paid campaigns");
-
-    var T = document.getElementById("searchArea");
-        T.style.display = "block";
 
     $('#ulCampaigns').html('');
 
@@ -61,6 +57,9 @@ function whatsPaid() {
 
         for (var i = 0; i < data.list.length; i++) {
             var campaign = data.list[i];
+
+            var T = document.getElementById("searchArea");
+            T.style.display = "block";
 
             $("#ulCampaigns").append("<li><a href=" + campaign.url + ">" + campaign.title + "</a></li><br>");
         }
