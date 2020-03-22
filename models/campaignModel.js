@@ -65,8 +65,8 @@ function isCampaignPaid(callback) {
     })
 }
 
-function insertNewCampaign(title, url, callback) {
-    var results = { success: true, campaign: { id: 1, title: title, url: url } }
+function insertNewCampaign(title, url, isFree, callback) {
+    var results = { success: true, campaign: { title: title, url: url, isFree:isFree } }
 
     callback(null, results);
 }
