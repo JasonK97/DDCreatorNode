@@ -1,28 +1,34 @@
 const { Pool } = require("pg");
 
 const connectionString = process.env.DATABASE_URL;
-const pool = new Pool({connectionString: connectionString});
+const pool = new Pool({ connectionString: connectionString });
 
 function getAllCampaigns(callback) {
-    var results = {list: [{id:1, title:"Quest for your mom", url: "url.com/campaign", isFree:true},
-    {id:2, title:"Quest for your dad", url: "url.com/campaign", isFree:true},
-    {id:3, title:"Quest for your brother", url: "url.com/campaign", isFree:true}]};
+    var sql = "SELECT * FROM campaign";
 
-    callback(null, results);
+    pool.query(sql, function (err, db_results) {
+        if (err) {
+            throw err;
+        } else {
+            var results = {
+                list: db_results.rows
+            };
+            callback(null, results);
+        }
+    })
 }
 
 function getCampaign(title, callback) {
-    var sql = "SELECT * FROM campaign";
+    var sql = "SELECT * FROM campaign WHERE title=$1::text";
+    var params = [title];
 
-    pool.query(sql, function(err, db_results) {
-        if(err) {
+    pool.query(sql, params, function (err, db_results) {
+        if (err) {
             throw err;
         } else {
-            //Successful results from db.
-            console.log("Back with results from the db:");
-            console.log(db_results);
-
-            var results = db_results;
+            var results = {
+                list: db_results.rows
+            };
             callback(null, results);
         }
     })
@@ -30,13 +36,25 @@ function getCampaign(title, callback) {
 }
 
 function isCampaignFree(isFree, callback) {
-    var results = {id:2, title:"Quest for your dad", url:"url.com/campaign", isFree:isFree}
-    
-    callback(null, results);
+    if (isFree == true) {
+        var sql = "SELECT * FROM campaign WHERE isFree=true";
+        var params = [isFree];
+
+        pool.query(sql, params, function (err, db_results) {
+            if (err) {
+                throw err;
+            } else {
+                var results = {
+                    list: db_results.rows
+                };
+                callback(null, results);
+            }
+        })
+    }
 }
 
 function insertNewCampaign(title, url, callback) {
-    var results = {success:true, campaign:{id:1, title:title, url:url}}
+    var results = { success: true, campaign: { id: 1, title: title, url: url } }
 
     callback(null, results);
 }

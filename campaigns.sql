@@ -30,6 +30,7 @@ INSERT INTO campaign(title, url, isFree) VALUES ('The Vessel of Stars', 'http://
 INSERT INTO campaign(title, url, isFree) VALUES ('The Alchemist`s Eyrie', 'http://archive.wizards.com/default.asp?x=dnd/oa/20001215a', true);
 INSERT INTO campaign(title, url, isFree) VALUES ('The Ghosts of Aniel', 'http://archive.wizards.com/default.asp?x=dnd/oa/20010112a', true);
 INSERT INTO campaign(title, url, isFree) VALUES ('One Last Riddle', 'http://archive.wizards.com/default.asp?x=dnd/oa/20010202a', true);
+INSERT INTO campaign(title, url, isFree) VALUES ('One More Riddle', 'http://archive.wizards.com/default.asp?x=dnd/oa/20010202a', false);
 -- INSERT INTO campaign(title, url) VALUES ('Manifesting: A Tale', '');
 -- INSERT INTO campaign(title, url) VALUES ('Something`s Cooking', '');
 -- INSERT INTO campaign(title, url) VALUES ('The Tower of Deception', '');

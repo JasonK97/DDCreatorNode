@@ -8,14 +8,25 @@ function getSpecificCampaign() {
         console.log("Back from the server with:");
         console.log(data);
 
-        for (var i = 0; i < data.length; i++) {
+        for (var i = 0; i < data.list.length; i++) {
 			var campaign = data.list[i];
 
-			$("#ulCampaigns").append("<li>" + campaign.title + " is a free campaign you can download here: " + campaign.url + "</li>");
+			$("#ulCampaigns").append("<li>" + campaign.title + " is a free campaign you can download here: <a href=" + campaign.url +">" + campaign.title + "</a></li><br>");
 		}
     });
 }
 
-function searchByCampaign() {
-    console.log("Searching by Campaign...");
+function whatsFree() {
+    console.log("Getting all free campaigns");
+
+     $.get("/searchByFree", function(data) {
+        console.log("Back from the server with:");
+        console.log(data);
+
+        for (var i = 0; i < data.list.length; i++) {
+			var campaign = data.list[i];
+
+			$("#ulCampaigns").append("<li>" + campaign.title + " is a free campaign you can download here: <a href=" + campaign.url +">" + campaign.title + "</a></li><br>");
+		}
+    });
 }
