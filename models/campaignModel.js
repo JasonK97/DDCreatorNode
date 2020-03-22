@@ -68,7 +68,18 @@ function isCampaignPaid(callback) {
 function insertNewCampaign(title, url, isFree, callback) {
     var results = { success: true, campaign: { title: title, url: url, isFree:isFree } }
 
-    callback(null, results);
+    var sql = "INSERT INTO campaign(title, url, isFree) VALUES ('" + title + "', '" + url + "', " + isFree + ");";
+
+    pool.query(sql, function (err, db_results) {
+        if (err) {
+            throw err;
+        } else {
+            var results = {
+                list: db_results.rows
+            };
+            callback(null, results);
+        }
+    })
 }
 
 module.exports = {

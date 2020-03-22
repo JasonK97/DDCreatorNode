@@ -69,6 +69,6 @@ function addCampaignToDb() {
     }
 
     $.post("/insertCampaign", function(data) {
-
+        $("#addedCampaign").innerHTML("Successfully added" + data);
     });
 }
