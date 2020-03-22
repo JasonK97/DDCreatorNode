@@ -81,3 +81,17 @@ a:hover {
     text-decoration: dotted;
     color: black;
 }
+
+#addCampaign {
+    
+}
+
+#footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(31, 0, 0);
+    color: white;
+    text-align: center;
+ }
