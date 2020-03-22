@@ -1,6 +1,9 @@
 function getSpecificCampaign() {
     console.log("Searching by campaign...");
 
+    var T = document.getElementById("searchArea");
+        T.style.display = "block";
+
     var title = $("#title").val();
     console.log("campaign: " + title);
 
@@ -9,9 +12,6 @@ function getSpecificCampaign() {
     $.get("/getSpecificCampaign", { title: title }, function (data) {
         console.log("Back from the server with:");
         console.log(data);
-
-        var T = document.getElementById("searchArea");
-        T.style.display = "block";
 
         $('#ulCampaigns').html('<h2>Search Results</h2>');
 
@@ -26,14 +26,14 @@ function getSpecificCampaign() {
 function whatsFree() {
     console.log("Getting all free campaigns");
 
+    var T = document.getElementById("searchArea");
+        T.style.display = "block";
+
     $('#ulCampaigns').html('');
 
     $.get("/searchByFree", function (data) {
         console.log("Back from the server with:");
         console.log(data);
-
-        var T = document.getElementById("searchArea");
-        T.style.display = "block";
 
         $('#ulCampaigns').html('<h2>Campaigns you can download for free</h2>');
 
@@ -48,14 +48,14 @@ function whatsFree() {
 function whatsPaid() {
     console.log("Getting all paid campaigns");
 
+    var T = document.getElementById("searchArea");
+        T.style.display = "block";
+
     $('#ulCampaigns').html('');
 
     $.get("/searchByPaid", function (data) {
         console.log("Back from the server with:");
         console.log(data);
-
-        var T = document.getElementById("searchArea");
-        T.style.display = "block";
 
         $('#ulCampaigns').html('<h2>Campaigns you can buy</h2>');
 
