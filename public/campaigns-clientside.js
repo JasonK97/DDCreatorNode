@@ -10,12 +10,12 @@ function getSpecificCampaign() {
         console.log("Back from the server with:");
         console.log(data);
 
-        $('#ulCampaigns').html('<h2>Results</h2>');
+        $('#ulCampaigns').html('<h2>Search Results</h2>');
 
         for (var i = 0; i < data.list.length; i++) {
 			var campaign = data.list[i];
 
-			$("#ulCampaigns").append("<li>" + campaign.title + " is a free campaign you can download here: <a href=" + campaign.url +">" + campaign.title + "</a></li><br>");
+			$("#ulCampaigns").append("<li><a href=" + campaign.url +">" + campaign.title + "</a></li><br>");
 		}
     });
 }
@@ -29,18 +29,18 @@ function whatsFree() {
         console.log("Back from the server with:");
         console.log(data);
 
-        $('#ulCampaigns').html('<h2>Results</h2>');
+        $('#ulCampaigns').html('<h2>Campaigns you can download for free</h2>');
 
         for (var i = 0; i < data.list.length; i++) {
 			var campaign = data.list[i];
 
-			$("#ulCampaigns").append("<li>" + campaign.title + " is a free campaign you can download here: <a href=" + campaign.url +">" + campaign.title + "</a></li><br>");
+			$("#ulCampaigns").append("<li><a href=" + campaign.url +">" + campaign.title + "</a></li><br>");
 		}
     });
 }
 
 function whatsPaid() {
-    console.log("Getting all free campaigns");
+    console.log("Getting all paid campaigns");
 
     $('#ulCampaigns').html('');
 
@@ -48,12 +48,12 @@ function whatsPaid() {
         console.log("Back from the server with:");
         console.log(data);
 
-        $('#ulCampaigns').html('<h2>Results</h2>');
+        $('#ulCampaigns').html('<h2>Campaigns you can buy</h2>');
 
         for (var i = 0; i < data.list.length; i++) {
 			var campaign = data.list[i];
 
-			$("#ulCampaigns").append("<li>" + campaign.title + " is a campaign that you can buy here: <a href=" + campaign.url +">" + campaign.title + "</a></li><br>");
+			$("#ulCampaigns").append("<li><a href=" + campaign.url +">" + campaign.title + "</a></li><br>");
 		}
     });
 }
