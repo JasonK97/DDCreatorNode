@@ -19,7 +19,9 @@ function getSpecificCampaign() {
 function whatsFree() {
     console.log("Getting all free campaigns");
 
-     $.get("/searchByFree", function(data) {
+    var free = $("#free").val();
+
+     $.get("/searchByFree",{isFree:free}, function(data) {
         console.log("Back from the server with:");
         console.log(data);
 
