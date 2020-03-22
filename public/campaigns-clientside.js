@@ -69,6 +69,6 @@ function addCampaignToDb() {
     }
 
     $.post("/insertCampaign",{title:title, url:url, isFree:isFree}, function(data) {
-        $("#addedCampaign").html("Successfully added Campaign to Database!");
+        alert("Successfully added Campaign to Database!");
     });
 }
