@@ -10,6 +10,8 @@ body {
     margin-right: 0px;
     margin-top: 0px;
     margin-bottom: 0px;
+    border: hidden;
+    border-radius: 7px;
 }
 
 #bannerWords {
@@ -23,6 +25,8 @@ body {
     color: rgb(145, 145, 145);
     text-align: center;
     padding: 20px;
+    border: hidden;
+    border-radius: 7px;
 }
 
 #search {
@@ -64,6 +68,8 @@ button:hover {
     font-size: 20px;
     padding: 25px;
     color: whitesmoke;
+    border: hidden;
+    border-radius: 7px;
 }
 
 a {
