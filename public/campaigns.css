@@ -27,14 +27,7 @@ body {
     padding: 20px;
     border: hidden;
     border-radius: 7px;
-    position: sticky;
 }
-
-.sticky {
-    position: fixed;
-    top: 0;
-    /* width: 100%; */
-  }
 
 #homepageLink {
     float: left;
@@ -92,6 +85,7 @@ button:hover {
     color: whitesmoke;
     border: hidden;
     border-radius: 7px;
+    display:none;
 }
 
 a {
@@ -104,9 +98,16 @@ a:hover {
     color: black;
 }
 
+#addCampaignDiv {
+    font-family: 'Itim', cursive;
+    color: rgb(31, 0, 0);
+    font-size: 15px;
+    bottom: 0;
+}
+
 #addLink {
     background-color: rgb(110, 0, 0);
-    padding: 15px;
+    padding: 7px;
     border: hidden;
     border-radius: 4px;
     font-family: 'Permanent Marker', cursive;
