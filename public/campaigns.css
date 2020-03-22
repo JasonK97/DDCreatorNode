@@ -87,6 +87,13 @@ button:hover {
     border-radius: 7px;
 }
 
+#addedCampaign {
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 20px;
+    color: black;
+}
+
 a {
     text-decoration: none;
     color: whitesmoke;
