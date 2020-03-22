@@ -65,3 +65,13 @@ button:hover {
     padding: 25px;
     color: whitesmoke;
 }
+
+a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+a:hover {
+    text-decoration: wavy;
+    color: black;
+}
