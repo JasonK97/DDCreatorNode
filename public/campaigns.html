@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="campaigns-clientside.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Campaign Database</title>
+</head>
+
+<body>
+    <h1>Search for your next campaign!</h1>
+    <input type="text" id="title" placeholder="Campaign"> <button onclick="getSpecificCampaign()">Search by Campaign</button><br>
+    <!-- <input type="checkbox" id="free">Search Free Campaigns <button onclick="whatsFree()">List of Free Campaigns</button><br> -->
+
+    <div>
+        <h2>Results</h2>
+        <ul id="ulCampaigns"></ul>
+    </div>
+
+</body>
+</html>
