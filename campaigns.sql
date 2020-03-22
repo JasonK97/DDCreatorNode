@@ -53,7 +53,7 @@ INSERT INTO campaign(title, url, isFree) VALUES ('Thicker Than Water', 'http://a
 -- INSERT INTO campaign(title, url, isFree) VALUES ('', '', true);
 -- INSERT INTO campaign(title, url, isFree) VALUES ('', '', true);
 
-INSERT INTO campaign(title, url, isFree) VALUES ('Scourge of the Howling Horde', 'https://www.drivethrurpg.com/product/54393/Scourge-of-the-Howling-Horde-3e?cPath=159&affiliate_id=35526', false);
+INSERT INTO campaign(title, url, isFree) VALUES ('Scourge of the Howling Horde', 'https://www.amazon.com/Scourge-Howling-Dungeons-Roleplaying-Adventure/dp/0786939354', false);
 INSERT INTO campaign(title, url, isFree) VALUES ('The Sunless Citadel', 'https://www.amazon.com/Sunless-Citadel-Dungeons-Dragons-Adventure/dp/0786916400', false);
 INSERT INTO campaign(title, url, isFree) VALUES ('The Ghosts of Saltmarsh', 'https://www.amazon.com/Dungeons-Dragons-Saltmarsh-Hardcover-Adventure/dp/0786966750/ref=sr_1_4?dchild=1&keywords=dungeons+and+dragons+version+5+campaigns&qid=1584849154&s=books&sr=1-4', false);
 -- INSERT INTO campaign(title, url, isFree) VALUES ('', '', false);
