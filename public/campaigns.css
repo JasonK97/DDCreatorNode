@@ -30,6 +30,12 @@ body {
     position: sticky;
 }
 
+.sticky {
+    position: fixed;
+    top: 0;
+    /* width: 100%; */
+  }
+
 #homepageLink {
     float: left;
     background-color: rgb(110, 0, 0);

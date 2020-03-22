@@ -72,3 +72,16 @@ function addCampaignToDb() {
         $("#addedCampaign").innerHTML("Successfully added" + data);
     });
 }
+
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("searchArea");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
