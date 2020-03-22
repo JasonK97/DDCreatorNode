@@ -30,3 +30,18 @@ function whatsFree() {
 		}
     });
 }
+
+function whatsPaid() {
+    console.log("Getting all free campaigns");
+
+     $.get("/searchByPaid", function(data) {
+        console.log("Back from the server with:");
+        console.log(data);
+
+        for (var i = 0; i < data.list.length; i++) {
+			var campaign = data.list[i];
+
+			$("#ulCampaigns").append("<li>" + campaign.title + " is a campaign that you can buy here: <a href=" + campaign.url +">" + campaign.title + "</a></li><br>");
+		}
+    });
+}

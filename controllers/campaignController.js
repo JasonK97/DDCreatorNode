@@ -31,6 +31,15 @@ function searchByFree(req, res) {
     });
 }
 
+function searchByPaid(req, res) {
+    
+    campaignModel.isCampaignPaid(function(error, results) {
+        if (error == null) {
+            res.json(results);
+        }
+    });
+}
+
 function insertCampaign(req, res) {
     var title = req.body.title;
     var url = req.body.url;
