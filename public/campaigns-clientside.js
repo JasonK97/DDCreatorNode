@@ -10,6 +10,9 @@ function getSpecificCampaign() {
         console.log("Back from the server with:");
         console.log(data);
 
+        var T = document.getElementById("searchArea");
+        T.style.display = "block";
+
         $('#ulCampaigns').html('<h2>Search Results</h2>');
 
         for (var i = 0; i < data.list.length; i++) {
@@ -29,6 +32,9 @@ function whatsFree() {
         console.log("Back from the server with:");
         console.log(data);
 
+        var T = document.getElementById("searchArea");
+        T.style.display = "block";
+
         $('#ulCampaigns').html('<h2>Campaigns you can download for free</h2>');
 
         for (var i = 0; i < data.list.length; i++) {
@@ -47,6 +53,9 @@ function whatsPaid() {
     $.get("/searchByPaid", function (data) {
         console.log("Back from the server with:");
         console.log(data);
+
+        var T = document.getElementById("searchArea");
+        T.style.display = "block";
 
         $('#ulCampaigns').html('<h2>Campaigns you can buy</h2>');
 
