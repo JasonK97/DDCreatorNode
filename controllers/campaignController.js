@@ -23,7 +23,7 @@ function getSpecificCampaign(req, res) {
 }
 
 function searchByFree(req, res) {
-    var isFree = req.query,isFree;
+    var isFree = req.query.isFree;
     
     campaignModel.isCampaignFree(isFree, function(error, results) {
         if (error == null) {
