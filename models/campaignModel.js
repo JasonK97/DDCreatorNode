@@ -66,7 +66,7 @@ function isCampaignPaid(callback) {
 }
 
 function insertNewCampaign(title, url, isFree, callback) {
-    var results = { success: true, campaign: { title: title, url: url, isFree:isFree } }
+    //var results = { success: true, campaign: { title: title, url: url, isFree:isFree } }
 
     var sql = "INSERT INTO campaign(title, url, isFree) VALUES ('" + title + "', '" + url + "', " + isFree + ");";
 
