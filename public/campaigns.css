@@ -110,6 +110,12 @@ a:hover {
     font-size: 15px;
 }
 
+#defaultInfo {
+    font-family: 'Itim', cursive;
+    color: whitesmoke;
+    font-size: 15px;
+}
+
 #addLink {
     background-color: rgb(110, 0, 0);
     padding: 7px;
