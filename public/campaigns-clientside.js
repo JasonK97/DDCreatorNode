@@ -23,7 +23,7 @@ function getSpecificCampaign() {
 function whatsFree() {
     console.log("Getting all free campaigns");
 
-    $('#results').html('');
+    $('#results').html('<ul id="ulCampaigns"></ul>');
     $('#ulCampaigns').html('');
 
     $.get("/searchByFree", function (data) {
