@@ -54,10 +54,51 @@ function insertCampaign(req, res) {
     })
 }
 
+function handleLogin(req, res) {
+	var result = {success: false};
+
+	if (req.body.username == "admin" && req.body.password == "password") {
+		req.session.user = req.body.username;
+		result = {success: true};
+	}
+
+	res.json(result);
+}
+
+function handleLogout(req, res) {
+	var result = {success: false};
+
+	if (req.session.user) {
+		req.session.destroy();
+		result = {success: true};
+	}
+
+	res.json(result);
+}
+
+function verifyLogin(req, res, next) {
+	if (req.session.user) {
+		next();
+	} else {
+		var result = {success:false, message: "Access Denied"};
+		res.status(401).json(result);
+	}
+}
+
+function logRequest(req, res, next) {
+	console.log("Received a request for: " + req.url);
+
+	next();
+}
+
 module.exports = {
     getCampaignList: getCampaignList,
     getSpecificCampaign: getSpecificCampaign,
     searchByFree: searchByFree,
     searchByPaid: searchByPaid,
-    insertCampaign: insertCampaign
+    insertCampaign: insertCampaign,
+    handleLogin: handleLogin,
+    handleLogout: handleLogout,
+    verifyLogin: verifyLogin,
+    logRequest: logRequest
 }
