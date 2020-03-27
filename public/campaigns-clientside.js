@@ -85,7 +85,8 @@ function login() {
 
 	$.post("/login", params, function(result) {
 		if (result && result.success) {
-			$("#status").text("Successfully logged in.");
+            $("#status").text("Successfully logged in.");
+            window.location = "./addCampaign.html";
 		} else {
 			$("#status").text("Error logging in.");
 		}
