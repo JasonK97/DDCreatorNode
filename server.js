@@ -16,10 +16,9 @@ app.use(session({
 app.use(express.static("public"));
 app.use(express.json()); //support json encoded bodies
 app.use(express.urlencoded({extended: true})); //support url encoded bodies
+app.use(campainController.logRequest);
 
 app.set("port", (process.env.PORT || 5000));
-
-app.use(logRequest);
 
 app.get("/getCampaigns", campaignController.getCampaignList);
 app.get("/getSpecificCampaign", campaignController.getSpecificCampaign);
