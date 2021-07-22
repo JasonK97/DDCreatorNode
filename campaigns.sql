@@ -3,9 +3,9 @@ DROP TABLE IF EXISTS campaign;
 CREATE TABLE campaign
 (
 	id	        SERIAL			NOT NULL	PRIMARY KEY,
-	title       VARCHAR(100)    NOT NULL,
-    url         VARCHAR(1000)   NOT NULL,
-    isFree      BOOLEAN         NOT NULL
+	title       	VARCHAR(100)    	NOT NULL,
+    	url         	VARCHAR(1000)   	NOT NULL,
+    	isFree      	BOOLEAN         	NOT NULL
 );
 
 INSERT INTO campaign(title, url, isFree) VALUES ('The Burning Plague', 'http://archive.wizards.com/default.asp?x=dnd/oa/20000801a', true);
